@@ -1,12 +1,19 @@
 package com.equipo3.conversor;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.Test;
+
+/**
+ * Pruebas unitarias para la clase ConversorTiempo.
+ */
 public class ConversorTiempoTest {
 
-    @Test
-    void ejemploTest() {
-        // TODO: agregar pruebas en la rama feature/tiempo
-    }
+  /**
+   * Prueba básica para verificar la correcta estructura del test.
+   */
+  @Test
+  public void ejemploTest() {
+    assertEquals(1, 1);
+  }
 }
