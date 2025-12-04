@@ -4,17 +4,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-/**
- * Pruebas unitarias para la clase ConversorLongitud.
- */
 public class ConversorLongitudTest {
 
-  /**
-   * Ejemplo de prueba unitaria para verificar la estructura del proyecto.
-   * Esta prueba se actualizará posteriormente con casos reales.
-   */
+  private static final double DELTA = 1e-6;
+
   @Test
-  public void ejemploTest() {
-    assertEquals(1, 1);
+  public void kilometrosAMetros() {
+    ConversorLongitud c = new ConversorLongitud();
+    double resultado = c.convertir(1.0, UnidadLongitud.KILOMETRO, UnidadLongitud.METRO);
+    assertEquals(1000.0, resultado, DELTA);
+  }
+
+  @Test
+  public void metrosACentimetros() {
+    ConversorLongitud c = new ConversorLongitud();
+    double resultado = c.convertir(3.0, UnidadLongitud.METRO, UnidadLongitud.CENTIMETRO);
+    assertEquals(300.0, resultado, DELTA);
+  }
+
+  @Test
+  public void idempotenciaMetrosAMetros() {
+    ConversorLongitud c = new ConversorLongitud();
+    double resultado = c.convertir(5.5, UnidadLongitud.METRO, UnidadLongitud.METRO);
+    assertEquals(5.5, resultado, DELTA);
+  }
+
+  @Test
+  public void metrosAPies() {
+    ConversorLongitud c = new ConversorLongitud();
+    double resultado = c.convertir(1.0, UnidadLongitud.METRO, UnidadLongitud.PIE);
+    assertEquals(3.28084, resultado, 0.001); 
   }
 }

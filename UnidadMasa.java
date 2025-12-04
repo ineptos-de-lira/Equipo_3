@@ -1,10 +1,22 @@
 package com.equipo3.conversor;
 
 /**
- * Enumeración vacía para unidades de masa.
- * Los valores serán agregados por el integrante responsable
- * en la rama feature/masa.
+ * Representa las unidades disponibles para conversión de masa.
  */
 public enum UnidadMasa {
-  // Pendiente de implementación.
+
+  /** Gramos. */
+  GRAMO,
+
+  /** Kilogramos. */
+  KILOGRAMO,
+
+  /** Toneladas. */
+  TONELADA,
+
+  /** Onzas. */
+  ONZA,
+
+  /** Libras. */
+  LIBRA
 }
