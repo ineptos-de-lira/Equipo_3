@@ -1,17 +1,32 @@
 package com.equipo3.conversor;
 
 /**
- * Clase principal para probar los conversores de temperatura y masa.
+ * Clase principal para probar los conversores de tiempo, longitud, temperatura y masa.
  */
 public class Main {
 
   /**
-   * Punto de entrada 
+   * Punto de entrada de la aplicación.
    *
    * @param args argumentos de la línea de comandos
    */
   public static void main(String[] args) {
 
+    // ================= TIEMPO =================
+    System.out.println("====== CONVERSOR DE TIEMPO ======\n");
+
+    System.out.println("--- Conversión de Tiempo ---");
+    ConversorTiempo cTiempo = new ConversorTiempo();
+
+    double hAMin =
+        cTiempo.convertir(2, UnidadTiempo.HORA, UnidadTiempo.MINUTO);
+    double dAH =
+        cTiempo.convertir(3, UnidadTiempo.DIA, UnidadTiempo.HORA);
+
+    System.out.println("2 h = " + hAMin + " min");
+    System.out.println("3 días = " + dAH + " h\n");
+
+    // ================= LONGITUD =================
     System.out.println("====== CONVERSOR DE LONGITUD ======\n");
 
     System.out.println("--- Conversión de Longitud ---");
@@ -27,16 +42,15 @@ public class Main {
 
     System.out.println("\n--- Prueba de Error Intencional (Metros a Pies) ---");
     try {
-        double resultadoError = cLong.convertir(1.0, UnidadLongitud.METRO, UnidadLongitud.PIE);
-        System.out.println("1 m = " + resultadoError + " pies");
+      double resultadoError =
+          cLong.convertir(1.0, UnidadLongitud.METRO, UnidadLongitud.PIE);
+      System.out.println("1 m = " + resultadoError + " pies");
     } catch (IllegalArgumentException e) {
-        System.out.println(">> EXCEPCIÓN CAPTURADA: " + e.getMessage());
-        System.out.println(">> (Esto demuestra que falta la lógica para PIE)");
+      System.out.println(">> EXCEPCIÓN CAPTURADA: " + e.getMessage());
+      System.out.println(">> (Esto demuestra el manejo de errores en longitud)");
     }
 
-    System.out.println("\nFIN DEL PROGRAMA (Sección Longitud)");
-
-    //TEMPERATURA 
+    // ================= TEMPERATURA =================
     System.out.println("\n====== CONVERSOR DE TEMPERATURA ======\n");
 
     System.out.println("--- Conversión de Temperatura ---");
@@ -50,7 +64,7 @@ public class Main {
     System.out.println("25 °C = " + cAF + " °F");
     System.out.println("300 K = " + kAC + " °C\n");
 
-    //MASA
+    // ================= MASA =================
     System.out.println("====== CONVERSOR DE MASA ======\n");
 
     System.out.println("--- Conversión de Masa ---");
