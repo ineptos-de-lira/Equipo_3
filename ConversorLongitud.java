@@ -3,11 +3,12 @@ package com.equipo3.conversor;
 public class ConversorLongitud {
 
   /**
+   * Convierte un valor entre dos unidades de longitud.
    *
-   * @param valor 
-   * @param origen
-   * @param destino 
-   * @return 
+   * @param valor  el valor a convertir
+   * @param origen la unidad de origen
+   * @param destino la unidad de destino
+   * @return el valor convertido en la unidad destino
    */
   public double convertir(double valor,
                           UnidadLongitud origen,
@@ -47,13 +48,14 @@ public class ConversorLongitud {
         return metros / 1000.0;
       case PULGADA:
         return metros / 0.0254;
-      
+      case PIE:
+        return metros / 0.3048;
       case YARDA:
         return metros / 0.9144;
       case MILLA:
         return metros / 1609.344;
       default:
-        throw new IllegalArgumentException("Unidad no soportada: " + unidad);
+        throw new IllegalArgumentException("Unidad no soportada");
     }
   }
 }
