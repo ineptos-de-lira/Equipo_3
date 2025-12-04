@@ -1,10 +1,19 @@
 package com.equipo3.conversor;
 
 /**
- * Enumeración vacía para unidades de tiempo.
- * Los valores serán agregados por el integrante responsable
- * en la rama feature/tiempo.
+ * Representa las unidades disponibles para conversión de tiempo.
  */
 public enum UnidadTiempo {
-  // Pendiente de implementación.
+
+  /** Segundos. */
+  SEGUNDO,
+
+  /** Minutos. */
+  MINUTO,
+
+  /** Horas. */
+  HORA,
+
+  /** Días. */
+  DIA
 }
