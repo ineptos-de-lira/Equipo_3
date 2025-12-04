@@ -25,7 +25,7 @@ public class ConversorTemperatura {
       case CELSIUS:
         return v;
       case FAHRENHEIT:
-        return v - 32 * 5 / 9;
+        return v - (32 * 5) / 9;
       case KELVIN:
         return v - 273.15;
       default:
