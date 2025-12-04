@@ -25,7 +25,7 @@ public class ConversorMasa {
       case KILOGRAMO:
         return valor;
       case GRAMO:
-        return valor * 0.01;
+        return valor * 0.001;
       case TONELADA:
         return valor * 1000;
       case ONZA:
@@ -42,7 +42,7 @@ public class ConversorMasa {
       case KILOGRAMO:
         return kg;
       case GRAMO:
-        return kg / 0.01;
+        return kg / 0.001;
       case TONELADA:
         return kg / 1000;
       case ONZA:
