@@ -25,7 +25,7 @@ public class ConversorTiempo {
       case SEGUNDO:
         return v;
       case MINUTO:
-        return v * 6;
+        return v * 60;
       case HORA:
         return v * 3600;
       case DIA:
