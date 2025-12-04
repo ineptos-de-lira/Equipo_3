@@ -26,6 +26,8 @@ public class ConversorVolumen {
         return v;
       case MILILITRO:
         return v * 0.001;
+      case METRO_CUBICO:
+        return v * 1000;
       default:
         throw new IllegalArgumentException("Unidad no soportada");
     }
@@ -37,8 +39,11 @@ public class ConversorVolumen {
         return l;
       case MILILITRO:
         return l / 0.001;
+      case METRO_CUBICO:
+        return l / 1000;
       default:
         throw new IllegalArgumentException("Unidad no soportada");
     }
   }
 }
+
