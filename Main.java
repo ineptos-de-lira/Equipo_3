@@ -1,7 +1,16 @@
+package com.equipo3.conversor;
+
+/**
+ * Clase principal del conversor de unidades.
+ */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Proyecto: Convertidor de Unidades - Equipo 3");
-        System.out.println("Este es el punto de partida en la rama main.");
-        System.out.println("Cada integrante debe crear su propia rama para implementar un feature.");
-    }
+
+  /**
+   * Punto de entrada de la aplicación.
+   *
+   * @param args argumentos de consola
+   */
+  public static void main(String[] args) {
+    // contenido del main
+  }
 }
