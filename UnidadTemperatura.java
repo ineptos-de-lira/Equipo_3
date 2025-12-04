@@ -1,10 +1,16 @@
 package com.equipo3.conversor;
 
 /**
- * Enumeración vacía para unidades de temperatura.
- * Los valores serán agregados por el integrante responsable
- * en la rama feature/temperatura.
+ * Representa las unidades disponibles para conversión de temperatura.
  */
 public enum UnidadTemperatura {
-  // Pendiente de implementación.
+
+  /** Grados Celsius. */
+  CELSIUS,
+
+  /** Grados Fahrenheit. */
+  FAHRENHEIT,
+
+  /** Grados Kelvin. */
+  KELVIN
 }

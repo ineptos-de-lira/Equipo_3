@@ -1,7 +1,7 @@
 package com.equipo3.conversor;
 
 /**
- * Clase principal para probar el conversor de masa.
+ * Clase principal para probar los conversores de temperatura y masa.
  */
 public class Main {
 
@@ -11,6 +11,22 @@ public class Main {
    * @param args argumentos de la línea de comandos
    */
   public static void main(String[] args) {
+
+    // ================= TEMPERATURA =================
+    System.out.println("====== CONVERSOR DE TEMPERATURA ======\n");
+
+    System.out.println("--- Conversión de Temperatura ---");
+    ConversorTemperatura cTemp = new ConversorTemperatura();
+
+    double cAF =
+        cTemp.convertir(25, UnidadTemperatura.CELSIUS, UnidadTemperatura.FAHRENHEIT);
+    double kAC =
+        cTemp.convertir(300, UnidadTemperatura.KELVIN, UnidadTemperatura.CELSIUS);
+
+    System.out.println("25 °C = " + cAF + " °F");
+    System.out.println("300 K = " + kAC + " °C\n");
+
+    // ================= MASA =================
     System.out.println("====== CONVERSOR DE MASA ======\n");
 
     System.out.println("--- Conversión de Masa ---");
